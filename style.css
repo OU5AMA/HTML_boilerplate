@@ -1,15 +1,18 @@
 
 *{
-    background: yellow;
+    margin: 0px;
 }
 
 .header{
     display: flex;
     justify-content: space-between;
+    padding: 0px;
+    background:#ff9900;
 }
 
 .logo{
     width: 3em;
+    margin: 1em;
 }
 
 .search{
@@ -21,36 +24,51 @@
     border-radius: 25px 0px 0px 25px;
     border-right: none;
     background: #fff;
+    padding: 0%;
     padding-left: 1em;
     margin: auto;
+    font-family: serif;
+    font-size: 13pt;
 }
 
 .search_btn{
     width: 4em;
-    height: 3em;
+    height: 3.5em;
     border-radius: 0px 25px 25px 0px;
     border-left: none;
     margin: auto;
-    padding-top: 0.20rem;
 }
 
 .search_btn>img{
-    height: 2.5em;
-    padding: 0em;
+    height: 2.25em;
     margin: auto;
+    transform-origin: 50% 10%;
+    transition: transform .5s linear;
 }
 
-.header>ul>li{
-    display: inline;
-    background: orange;
+.search_btn>img:hover{
+    transform: scale(1.5) rotate(1deg);
+}
+
+.header>ul{
+    display: inline-flex;
+    text-decoration: none;
+    font: 1em sans-serif;
+    font-weight: 550;
+    list-style: none;
+    margin: auto;
+    margin-right: 1em;
+    font-style: oblique;
+
 }
 
 .header>ul>li>a{
-    margin: 1em;
+    margin: 1em 0.5em;
     text-decoration: none;
     padding: .5em;
     border-radius: 25px;
-
+    color: black;
+    background-color: greenyellow;
 }
 
 .header>ul>li>a:hover{
@@ -58,5 +76,16 @@
 }
 
 #homepage_btn{
-    background: red;
+    background: #ff9900;
+}
+
+#homepage_btn:hover{
+    background: rgb(211, 211, 190);
+}
+
+@media all and (max-width:1000px) {
+    *{
+        background: #fff;
+        margin: 0px;
+    }
 }
