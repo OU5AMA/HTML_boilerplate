@@ -1,13 +1,15 @@
 
 *{
-    margin: 0px;
+    margin: 0 auto;
 }
 
 .header{
     display: flex;
     justify-content: space-between;
     padding: 0px;
-    background:#ff9900;
+    width: 100%;
+    position: sticky;
+    top: 0 auto;
 }
 
 .logo{
@@ -75,17 +77,79 @@
     background: rgb(211, 211, 190);
 }
 
-#homepage_btn{
-    background: #ff9900;
+/* #homepage_btn{ */
+/* the main part where I explain CSS grid */
+
+/* CSS grid: template-row */
+.num{
+    display: grid;
+    grid-template-columns:33.3% 33.3% 33.3%;
+    margin: 0 auto;
+    width: 80vh;
+    grid-gap: 1rem;
+
+}
+
+.num>div{
+    background:rgb(144, 66, 163);
+    padding: 1rem;
+    text-align: center;
+    margin: 0px;
+    font-size: 3em;
+    padding: 4rem;
+}
+.num :nth-child(even){
+    background: rgb(105, 32, 32);
+}
+
+
+.side_menu{
+    background: rgb(17, 90, 59);
+    height: 4rem;
+    position: relative;
+}
+check
+.main{
+    background: cyan;
+    /* height: 4rem; */
+    position: relative;
+}
+
+.ads{
+    background: purple;
+    position: static;
+    top: 1em;
+    height: 10rem;
+}
+
+.gid_diag{
+    background: cyan;
+    display: grid;
+    grid-template-columns: repeat(9,1fr);
+    grid-template-rows: repeat(8, minmax(100px, auto));
+    grid-gap: 1rem;
+
+}
+
+.footer{
+    background: rgb(71, 71, 71);
+    position: relative;
+    bottom: 0em;
+    height: 8em;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+
 }
 
 #homepage_btn:hover{
     background: rgb(211, 211, 190);
 }
 
-@media all and (max-width:1000px) {
+@media all and (max-width:850px) {
     *{
         background: #fff;
         margin: 0px;
     }
+
 }
